@@ -19,6 +19,15 @@ setTimeout(function(){
             users_numbers.push(number);
         }
     }
+    let numbers_guessed=CheckNumber(users_numbers, array_of_numbers)
 }, 6000);
 //Verificare se i numeri sono uguali e quali e quanti numeri ha indovinato l'utente
-function CheckNumber()
+function CheckNumber(users_numbers, random_numbers){
+    let numbers_guessed=[];
+    for(let i=0; i<users_numbers.length; i++){
+        if(random_numbers[i]== users_numbers[i])){
+            numbers_guessed.push(users_numbers[i]);
+        }
+    }
+    return numbers_guessed;
+}
