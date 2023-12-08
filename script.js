@@ -25,9 +25,22 @@ setTimeout(function(){
 function CheckNumber(users_numbers, random_numbers){
     let numbers_guessed=[];
     for(let i=0; i<users_numbers.length; i++){
-        if(random_numbers[i]== users_numbers[i])){
+        if(random_numbers[i]== users_numbers[i]){
             numbers_guessed.push(users_numbers[i]);
         }
     }
     return numbers_guessed;
+
+}
+ 
+//Funzione che stampa il risultato
+function PrintResult(array){
+    let text;
+    if(array.length==0){
+        text = 'Hai una pessima memoria. Hai indovinato 0 numerti, riprova il gioco'
+    }
+    else{
+        text= 'Hai indovinato $(array.lenght) . Bravo!'
+    }
+    document.getElementById('results').innerHTML=text;
 }
